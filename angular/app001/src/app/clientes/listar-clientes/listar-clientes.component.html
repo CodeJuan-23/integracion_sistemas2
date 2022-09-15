@@ -1,1 +1,27 @@
 <h1>PAGINA PRINCIPAL DE CLIENTES</h1>
+
+<button (click)="addCliente()">Add cliente</button>
+<button (click)="removeCliente()">Add cliente</button>
+
+<input type="text" [(ngModel)]="txtValor">
+
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Numero Documento</th>
+        <th>Nombres</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{ cliente.tipo }}</td>
+        <td>{{ cliente.numero_documento }}</td>
+        <td>{{ cliente.nombres }}</td>
+      </tr>
+    </tbody>
+</table>
+
+<h2> el valor del texto es {{txtValor}}</h2>
+
+  
