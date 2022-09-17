@@ -49,8 +49,10 @@ export class ListarClientesComponent implements OnInit {
    /* this.clientes=[{tipo:"PERSONA",numero_documento:"12345678",nombres:"Luis"}]
    */
 
-   this.service.getClientes().subscribe((response)=>{
+   this.service.getClientes().subscribe((response:any)=>{
 
+    console.log(response.data);
+    this.clientes=response.data;
     });
 
     this.dtTrigger.next(null);  
