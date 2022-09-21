@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-
 import { ClientesService } from '../clientes.service';
 
-
 @Component({
-  selector: 'app-listar-clientes',
-  templateUrl: './listar-clientes.component.html',
-  styleUrls: ['./listar-clientes.component.css']
+  selector: 'app-list-clientes',
+  templateUrl: './list-clientes.component.html',
+  styleUrls: ['./list-clientes.component.css']
 })
-export class ListarClientesComponent implements OnInit {
+export class ListClientesComponent implements OnInit {
 
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();
@@ -53,10 +51,10 @@ export class ListarClientesComponent implements OnInit {
 
     console.log(response.data);
     this.clientes=response.data;
-    this.dtTrigger.next(null); 
+    this.dtTrigger.next(null);
     });
 
-     
+      
   }
 
 }
