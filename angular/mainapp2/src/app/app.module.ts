@@ -13,6 +13,14 @@ import { NewProductoComponent } from './productos/new-producto/new-producto.comp
 import { DataTablesModule } from 'angular-datatables';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ListVentasComponent } from './ventas/list-ventas/list-ventas.component';
+import { NewVentaComponent } from './ventas/new-venta/new-venta.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+import {MatInputModule} from '@angular/material/input'; 
+import { ReactiveFormsModule} from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -23,14 +31,22 @@ import { HttpClientModule } from '@angular/common/http';
     ListClientesComponent,
     NewClienteComponent,
     ListProductosComponent,
-    NewProductoComponent
+    NewProductoComponent,
+    ListVentasComponent,
+    NewVentaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DataTablesModule,
     FormsModule, 
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatSelectModule 
     
   ],
   providers: [],
